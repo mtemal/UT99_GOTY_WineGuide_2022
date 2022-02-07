@@ -10,25 +10,26 @@ https://ia902800.us.archive.org/15/items/UnrealTournamentGOTYUSA/Unreal%20Tourna
 Download UT 469b Patch
 https://github.com/OldUnreal/UnrealTournamentPatches/releases
 
-Install wine, winetricks, and iat:
+Install wine, winetricks, and iat:  
 
-sudo apt install wine32
-sudo apt install winetricks
-winetricks orm=backbuffer glsl=disable sudo apt install iat
+sudo apt install wine32  
+sudo apt install winetricks  
+winetricks orm=backbuffer glsl=disable   
+ 
 
-Use iat to turn the .bin to a .iso:
+Use iat to turn the .bin to a .iso:  
+sudo apt install iat 
+cd Downloads/  
 
-cd Downloads/
+extract the .zip file so that the .bin and .cue files are present in the Downloads/ folder.  
 
-extract the .zip file so that the .bin and .cue files are present in the Downloads/ folder.
+iat 'Unreal Tournament (USA) (Disc 1) (Game of the Year Edition) (Rerelease).bin' > UT.iso  
 
-iat 'Unreal Tournament (USA) (Disc 1) (Game of the Year Edition) (Rerelease).bin' > UT.iso
+Mount and Install UT99 and Patch 469b:  
 
-Mount and Install UT99 and Patch 469b:
-
-sudo mount -o loop UT.iso /mnt
-cd /mnt
-wine Setup.exe
-cd ~
-cd Downloads/
-wine OldUnreal-UTPatch469b-Windows.exe
+sudo mount -o loop UT.iso /mnt  
+cd /mnt  
+wine Setup.exe  
+cd ~  
+cd Downloads/  
+wine OldUnreal-UTPatch469b-Windows.exe  
